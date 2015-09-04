@@ -59,7 +59,7 @@ def login(username, password):
 
 def get_course_id(course_link):
     response = session.get(course_link)
-    matches = re.search('data-courseid="(\d+)"', response.text, re.IGNORECASE)
+    matches = re.search('data-course-id="(\d+)"', response.text, re.IGNORECASE)
     return matches.groups()[0] if matches else None
 
 
